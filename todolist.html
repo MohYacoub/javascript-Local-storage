@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>to do List Page</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        body {
+            
+        }
+    </style>
+
+</head>
+<body>
+   <div id="welcome"></div> <br/> <br/>
+   <lable>To Do List</lable> <input type="text" placeholder="Input">       
+
+
+
+
+   <script>
+        var output = localStorage.getItem("userName");
+        $("#welcome").html ("Welcome " + output);
+        
+
+   </script>
+</body>
+</html>

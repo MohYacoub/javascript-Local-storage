@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> data storege</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <style>
+    body {
+      background-color: #86bf67;
+    }
+
+    #div1 {
+      border: 5px solid black;
+      width: 400px;
+      height: 300px;
+      margin: auto;
+      margin-top: 100px;
+      background-color: #ffffff;
+      border-radius: 50px;
+    }
+
+    #h2   {
+      margin-top: 20px;
+      text-align: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    #error {
+     margin: 0px;
+      text-align: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    #inp1 {
+      margin: auto;
+      display: block;
+      background-color: #f2f2f2;
+      width: 250px;
+      height: 30px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-weight: 500;
+
+    }
+
+    #inp2 {
+      margin: auto;
+      margin-top: 50px;
+      display: block;
+      background-color: #86bf67;
+      width: 130px;
+      height: 30px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-weight: 500;
+      color: white;
+
+    }
+  </style>
+
+
+</head>
+
+<body>
+
+  <div id="div1">
+    <h2 id="h2">Register Form</h2>
+    <h2 id="h2">Enter Your Name</h2>
+    <input id="inp1" type="text">
+    <h3 id="error"></h3>
+    <input id="inp2" type="button" value="Register">
+    
+ </div>
+
+
+
+  <script>
+
+
+    $("#inp2").click(function () {
+      var input = $("#inp1").val();
+
+      if (input != "") {
+        localStorage.setItem("userName", input);
+        window.location = "todolist.html";
+      }
+      else {
+        $("#error").html("Please enter your user name ").css("color", "red");
+      }
+    });
+
+
+
+  </script>
+</body>
+
+</html>
